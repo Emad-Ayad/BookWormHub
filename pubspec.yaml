@@ -39,6 +39,7 @@ dependencies:
   get: ^4.6.6
   build_runner: ^2.4.13
   flutter_gen_runner: ^5.8.0
+  font_awesome_flutter: ^10.8.0
 
 dev_dependencies:
   flutter_test:
