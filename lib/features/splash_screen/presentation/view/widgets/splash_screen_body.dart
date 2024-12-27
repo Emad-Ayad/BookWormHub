@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
+import '../../../../../core/constants/styles.dart';
 import '../../../../HomeScreen/presentation/view/home_screen.dart';
 
 class SplashScreenBody extends StatefulWidget {
@@ -44,7 +45,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
             children: [
               Assets.images.book.image(),
               Positioned(
-                right: 130,
+                right: 115,
                 bottom: 50,
                 child: AnimatedBuilder(
                   animation: slidingAnimation,
@@ -57,10 +58,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
                         opacity: opacityLevel,
                         child: const Text(
                           "Read Free Books",
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500,
-                          ),
+                          style: Styles.titleMedium,
                         ),
                       ),
                     );
