@@ -58,7 +58,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
                         opacity: opacityLevel,
                         child: const Text(
                           "Read Free Books",
-                          style: Styles.titleMedium,
+                          style: Styles.bodyText18,
                         ),
                       ),
                     );
