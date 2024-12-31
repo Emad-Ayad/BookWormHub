@@ -1,21 +1,19 @@
 import 'package:flutter/cupertino.dart';
 
-abstract class Styles{
-
+abstract class Styles {
   static const TextStyle headline32 = TextStyle(
-    fontSize: 32,
-    fontWeight: FontWeight.bold,
-  );
+      fontSize: 32,
+      fontWeight: FontWeight.bold,
+      fontFamily: 'Sectra');
 
   static const TextStyle headline20 = TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.w600,
-    fontFamily: 'GTSectraFine-Regular'
-  );
+      fontSize: 20,
+      fontWeight: FontWeight.w600,
+      fontFamily: 'Sectra');
 
   static const TextStyle headline24 = TextStyle(
-      fontSize: 24,
-      fontWeight: FontWeight.bold,
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
   );
 
   static const TextStyle bodyText18 = TextStyle(
@@ -27,5 +25,4 @@ abstract class Styles{
     fontSize: 14,
     fontWeight: FontWeight.normal,
   );
-
 }
