@@ -24,7 +24,7 @@ class SimilarBooksSection extends StatelessWidget {
             itemBuilder: (context, index) {
               return const Padding(
                 padding: EdgeInsets.all(5.0),
-                child: CardItem(),
+                child: CardItem(imageUrl: 'https://www.casualoptimist.com/wp-content/uploads/2024/03/understory-design-emily-mahon-scaled.jpg',),
               );
             },
           ),

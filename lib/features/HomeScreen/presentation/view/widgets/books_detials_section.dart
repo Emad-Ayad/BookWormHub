@@ -16,7 +16,7 @@ class BooksDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.sizeOf(context).width * 0.2),
-          child: const CardItem(),
+          child: const CardItem(imageUrl: 'https://www.casualoptimist.com/wp-content/uploads/2024/03/understory-design-emily-mahon-scaled.jpg',),
         ),
         SizedBox(height: MediaQuery.sizeOf(context).height * .02),
         const Text(
