@@ -28,7 +28,7 @@ class BookWormHub extends StatelessWidget {
         BlocProvider(
           create: (context) => NewestBooksCubit(
             getIt.get<HomeRepoImpl>(),
-          ),
+          )..getNewestBooks(),
         ),
       ],
       child: MaterialApp.router(

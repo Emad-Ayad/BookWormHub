@@ -28,7 +28,10 @@ class BooksDetailsSection extends StatelessWidget {
           style: Styles.bodyText18,
         ),
         SizedBox(height: MediaQuery.sizeOf(context).height * .018),
-        const RatingWidget(),
+        const RatingWidget(
+          rating: 5,
+          ratingCount: 55,
+        ),
         SizedBox(height: MediaQuery.sizeOf(context).height * .03),
         const BookButton()
       ],

@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 class CardItem extends StatelessWidget {
@@ -10,14 +11,17 @@ class CardItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(16),
       child: AspectRatio(
         aspectRatio: 2.7 / 4,
-        child: Container(
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              image: DecorationImage(
-                  image: NetworkImage(imageUrl), fit: BoxFit.fill)),
+        child: CachedNetworkImage(
+          imageUrl: imageUrl,
+          fit: BoxFit.fill,
+          errorWidget: (context, url, error) => const Icon(Icons.error),
+          placeholder: (context, url) => const Center(
+            child: CircularProgressIndicator(),
+          ),
         ),
       ),
     );

@@ -22,7 +22,7 @@ class FeaturedBooksListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return  Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: CardItem( imageUrl: state.books[index].volumeInfo?.imageLinks?.thumbnail??'https://www.casualoptimist.com/wp-content/uploads/2024/03/understory-design-emily-mahon-scaled.jpg',),
+                  child: CardItem( imageUrl: state.books[index].volumeInfo!.imageLinks!.thumbnail!,),
                 );
               },
             ),

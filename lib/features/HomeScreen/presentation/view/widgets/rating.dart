@@ -6,9 +6,11 @@ import '../../../../../core/constants/styles.dart';
 
 class RatingWidget extends StatelessWidget {
   const RatingWidget({
-    super.key,
+    super.key, required this.rating, required this.ratingCount,
   });
 
+  final int rating;
+  final int ratingCount;
   @override
   Widget build(BuildContext context) {
     return const Row(
