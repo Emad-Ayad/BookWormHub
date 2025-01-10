@@ -23,7 +23,7 @@ class BookButton extends StatelessWidget {
           ),
           child: const Center(
             child: Text(
-              "19.99" r"$",
+              "Free",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 18,

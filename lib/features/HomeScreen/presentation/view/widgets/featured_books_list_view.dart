@@ -2,7 +2,9 @@ import 'package:book_worm_hub/features/HomeScreen/data/model/book_model.dart';
 import 'package:book_worm_hub/features/HomeScreen/presentation/cubits/featured_books_cubit/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../../core/utils/app_router.dart';
 import 'card_item.dart';
 
 class FeaturedBooksListView extends StatelessWidget {
@@ -20,9 +22,18 @@ class FeaturedBooksListView extends StatelessWidget {
               itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return  Padding(
+                return Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: CardItem( imageUrl: state.books[index].volumeInfo!.imageLinks!.thumbnail!,),
+                  child: GestureDetector(
+                    onTap: () {
+                      GoRouter.of(context)
+                          .push(AppRouter.kDetailsRoute, extra: state.books[index]);
+                    },
+                    child: CardItem(
+                      imageUrl:
+                          state.books[index].volumeInfo!.imageLinks!.thumbnail!,
+                    ),
+                  ),
                 );
               },
             ),

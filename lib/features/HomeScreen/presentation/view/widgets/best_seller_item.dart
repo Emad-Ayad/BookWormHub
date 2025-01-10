@@ -19,16 +19,16 @@ class BestSellerItems extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: GestureDetector(
         onTap: () {
-          GoRouter.of(context).push(AppRouter.kDetailsRoute);
+          GoRouter.of(context).push(AppRouter.kDetailsRoute,extra: newestBooks);
         },
         child: SizedBox(
-          height: 125,
+          height: 110,
           child: Row(
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: AspectRatio(
-                  aspectRatio: 2.7 / 4,
+                  aspectRatio: 2.8 / 4,
                   child: CachedNetworkImage(
                     imageUrl: newestBooks.volumeInfo!.imageLinks!.thumbnail!,
                     fit: BoxFit.fill,
@@ -40,6 +40,7 @@ class BestSellerItems extends StatelessWidget {
                 width: MediaQuery.sizeOf(context).width * 0.6,
                 child:  Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       newestBooks.volumeInfo!.title!,
@@ -51,7 +52,7 @@ class BestSellerItems extends StatelessWidget {
                      newestBooks.volumeInfo!.authors![0],
                       style: Styles.bodyText14,
                     ),
-                    const SizedBox(height: 5,),
+                    const SizedBox(height: 2,),
                     const Row(
                       children: [
                         Text(
