@@ -1,7 +1,4 @@
-import 'package:book_worm_hub/features/HomeScreen/data/model/book_model.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../HomeScreen/presentation/view/widgets/best_seller_item.dart';
 
 class ResultsListView extends StatelessWidget {
   const ResultsListView({super.key});

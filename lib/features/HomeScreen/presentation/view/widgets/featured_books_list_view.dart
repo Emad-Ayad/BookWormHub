@@ -1,4 +1,3 @@
-import 'package:book_worm_hub/features/HomeScreen/data/model/book_model.dart';
 import 'package:book_worm_hub/features/HomeScreen/presentation/cubits/featured_books_cubit/featured_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

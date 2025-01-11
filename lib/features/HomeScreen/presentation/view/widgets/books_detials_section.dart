@@ -1,5 +1,3 @@
-
-import 'package:book_worm_hub/features/HomeScreen/presentation/view/widgets/rating.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/styles.dart';
@@ -19,20 +17,22 @@ class BooksDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.sizeOf(context).width * 0.2),
-          child:  CardItem(imageUrl:book.volumeInfo?.imageLinks?.thumbnail ?? " ",),
+          child: CardItem(
+            imageUrl: book.volumeInfo?.imageLinks?.thumbnail ?? " ",
+          ),
         ),
         SizedBox(height: MediaQuery.sizeOf(context).height * .02),
-         Text(
-           book.volumeInfo?.title ??"UnKnown",
+        Text(
+          book.volumeInfo?.title ?? "UnKnown",
           style: Styles.headline32,
-           textAlign: TextAlign.center,
+          textAlign: TextAlign.center,
         ),
-         Text(
-          book.volumeInfo?.authors?[0] ??"UnKnown",
+        Text(
+          book.volumeInfo?.authors?[0] ?? "UnKnown",
           style: Styles.bodyText14,
         ),
         SizedBox(height: MediaQuery.sizeOf(context).height * .03),
-        const BookButton()
+        BookButton(book: book)
       ],
     );
   }

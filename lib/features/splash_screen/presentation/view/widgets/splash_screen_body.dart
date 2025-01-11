@@ -2,12 +2,9 @@ import 'package:book_worm_hub/core/utils/app_router.dart';
 import 'package:book_worm_hub/gen/assets.gen.dart';
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/constants/styles.dart';
-import '../../../../HomeScreen/presentation/view/home_screen.dart';
 
 class SplashScreenBody extends StatefulWidget {
   const SplashScreenBody({super.key});
