@@ -44,8 +44,8 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
             children: [
               Assets.images.book.image(),
               Positioned(
-                right: 115,
-                bottom: 50,
+                right: MediaQuery.sizeOf(context).width*0.3,
+                bottom: MediaQuery.sizeOf(context).height*0.06,
                 child: AnimatedBuilder(
                   animation: slidingAnimation,
                   builder: (context, _) {
@@ -93,7 +93,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody>
     Future.delayed(
       const Duration(seconds: 3),
           () {
-        GoRouter.of(context).push(AppRouter.kHomeRoute);
+        GoRouter.of(context).pushReplacement(AppRouter.kHomeRoute);
       },
     );
   }

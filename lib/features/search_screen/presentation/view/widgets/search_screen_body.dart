@@ -13,20 +13,23 @@ class SearchScreenBody extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-            child:Column(
-              children: [
-                CustomSearchTextField(),
-                SizedBox(
-                  height: MediaQuery.sizeOf(context).height * 0.02,
-                ),
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Results',
-                    style: Styles.bodyText18,
+            child:Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  CustomSearchTextField(),
+                  SizedBox(
+                    height: MediaQuery.sizeOf(context).height * 0.02,
                   ),
-                ),
-              ],
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      'Results',
+                      style: Styles.bodyText18,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           SliverFillRemaining(

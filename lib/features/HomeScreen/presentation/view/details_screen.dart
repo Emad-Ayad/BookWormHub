@@ -40,9 +40,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                   BooksDetailsSection(
                     book: widget.book,
                   ),
-                  Expanded(
-                      child: SizedBox(
-                          height: MediaQuery.sizeOf(context).height * .04)),
+                  SizedBox(
+                      height: MediaQuery.sizeOf(context).height * .04),
                    SimilarBooksSection(book: widget.book)
                 ],
               ),

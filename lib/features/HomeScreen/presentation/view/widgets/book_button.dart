@@ -55,7 +55,7 @@ class BookButton extends StatelessWidget {
             ),
             child: const Center(
               child: Text(
-                "Free Preview",
+                "Preview",
                 style:
                 TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
               ),
