@@ -17,8 +17,11 @@ class BooksDetailsSection extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(
               horizontal: MediaQuery.sizeOf(context).width * 0.2),
-          child: CardItem(
-            imageUrl: book.volumeInfo?.imageLinks?.thumbnail ?? " ",
+          child: Hero(
+            tag: '${book.volumeInfo?.imageLinks?.thumbnail}',
+            child: CardItem(
+              imageUrl: book.volumeInfo?.imageLinks?.thumbnail ?? " ",
+            ),
           ),
         ),
         SizedBox(height: MediaQuery.sizeOf(context).height * .02),

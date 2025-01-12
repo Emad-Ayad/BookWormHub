@@ -34,7 +34,7 @@ class _SearchScreenBodyState extends State<SearchScreenBody> {
     // Add scroll listener to trigger lazy loading
     _scrollController.addListener(() {
       if (_scrollController.position.pixels >=
-              _scrollController.position.maxScrollExtent - 200 &&
+          _scrollController.position.maxScrollExtent - 200 &&
           !isLoading) {
         context.read<SearchCubit>().getAllBooks(isPagination: true);
       }

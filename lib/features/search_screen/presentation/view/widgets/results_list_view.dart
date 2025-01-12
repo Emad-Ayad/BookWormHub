@@ -50,8 +50,11 @@ class ResultsGridView extends StatelessWidget {
                   GoRouter.of(context)
                       .push(AppRouter.kDetailsRoute, extra: filteredBooks[index]);
                 },
-                child: CardItem(
-                  imageUrl: filteredBooks[index].volumeInfo?.imageLinks?.thumbnail ?? "",
+                child: Hero(
+                  tag: '${filteredBooks[index].volumeInfo?.imageLinks?.thumbnail}',
+                  child: CardItem(
+                    imageUrl: filteredBooks[index].volumeInfo?.imageLinks?.thumbnail ?? "",
+                  ),
                 ),
               );
             },

@@ -27,9 +27,12 @@ class BestSellerItems extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8),
                 child: AspectRatio(
                   aspectRatio: 2.8 / 4,
-                  child: CachedNetworkImage(
-                    imageUrl: book.volumeInfo!.imageLinks!.thumbnail!,
-                    fit: BoxFit.fill,
+                  child: Hero(
+                    tag: book.volumeInfo!.imageLinks!.thumbnail!,
+                    child: CachedNetworkImage(
+                      imageUrl: book.volumeInfo!.imageLinks!.thumbnail!,
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               ),

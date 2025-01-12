@@ -28,9 +28,12 @@ class FeaturedBooksListView extends StatelessWidget {
                       GoRouter.of(context)
                           .push(AppRouter.kDetailsRoute, extra: state.books[index]);
                     },
-                    child: CardItem(
-                      imageUrl:
-                          state.books[index].volumeInfo!.imageLinks!.thumbnail!,
+                    child: Hero(
+                      tag: '${state.books[index].volumeInfo?.imageLinks?.thumbnail}',
+                      child: CardItem(
+                        imageUrl:
+                            state.books[index].volumeInfo!.imageLinks!.thumbnail!,
+                      ),
                     ),
                   ),
                 );
