@@ -64,6 +64,10 @@ class HomeRepoImpl implements HomeRepo {
           endPoint:
           "volumes?Filtering=free-ebooks&q=subject:$category&sorting=relevance");
 
+
+      if (data == null || data['items'] == null) {
+        return Right([]); // Return an empty list if no data found
+      }
       List<BookModel> booksList = [];
 
       for (var item in data['items']) {
